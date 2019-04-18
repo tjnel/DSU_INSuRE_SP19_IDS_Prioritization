@@ -14,3 +14,14 @@ We are seeking a way to combine these weak, high-false-positive signatures to ge
 ## Dataset Note
 The two datasets being used for testing and validation are CSE-CIC-IDS2018 on AWS and Intrusion Detection Evaluation Dataset (CICIDS2017). Both of which can be found at https://www.unb.ca/cic/datasets/
 *Note* The flow data *.csv files found in CSE-CIC-IDS2018 and IDS2017 are quite large, with the 2018 data being well over 8GB in memory. It is therefore advised to run these Jupyter Notebooks with a runtime which is able to handle quite a bit more than 8GB of data in memory at one time.
+
+## Order of use
+We studied the data with the four notebooks contained in this Git Repo. The initial exploration was done first with CSC791_IDSML_Initial_K_Means_Data_Exploration_and_Visuals.ipynb upon a small subset of the data in order to determine some fundamental paterns within the dataset.
+
+Next we use CSC791_IDSML_Dataset_Ingestion.ipynb to start aggregating the dataset from IDS2018 into a single larger Dataframe using pandas.
+
+After this we use CSC791_IDSML_TrainTest_Split.ipynb to further clean and normalize the data as well as split it into a training group and a testing group.
+
+After splitting and cleaning the data we use CSC791_IDSML_Classifiers.ipynb to run our decision tree classification training and then confirm our accuracy scores and create a prioritization score based on the probabilities found with our decision tree models.
+
+Then last we validate the success of our classifier on the CIC-IDS2017 Dataset.
