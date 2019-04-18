@@ -231,6 +231,10 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
+# Pickle Files
+.pkl
+.pickle
+
 # Environments
 .env
 .venv
